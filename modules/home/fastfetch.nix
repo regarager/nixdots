@@ -1,0 +1,79 @@
+{...}: {
+  programs.fastfetch = {
+    enable = true;
+    settings = {
+      logo.padding = {
+        top = 2;
+        left = 5;
+        right = 5;
+      };
+
+      display = {
+        separator = " ";
+        color = "reset_";
+      };
+
+      modules = [
+        {
+          key = "╭──────────────╮";
+          type = "custom";
+        }
+        {
+          key = "│ {#91}  hostname  {#keys}│";
+          type = "title";
+          format = "{host-name}";
+        }
+        {
+          key = "│ {#93}{icon}  distro    {#keys}│";
+          type = "os";
+        }
+        {
+          key = "│ {#92}  kernel    {#keys}│";
+          type = "kernel";
+        }
+        {
+          key = "│ {#96}󰇄  desktop   {#keys}│";
+          type = "wm";
+        }
+        {
+          key = "│ {#94}  term      {#keys}│";
+          type = "terminal";
+        }
+        {
+          key = "│ {#94}  shell     {#keys}│";
+          type = "shell";
+        }
+        {
+          key = "│ {#95}  memory    {#keys}│";
+          type = "memory";
+        }
+        {
+          key = "│ {#34}󰉉  disk      {#keys}│";
+          type = "disk";
+          folders = "/home";
+        }
+        {
+          key = "│ {#92}󰅐  uptime    {#keys}│";
+          type = "uptime";
+        }
+        {
+          key = "│ {#96}󰏖  packages  {#keys}│";
+          type = "packages";
+        }
+        {
+          key = "├──────────────┤";
+          type = "custom";
+        }
+        {
+          key = "│ {#39}  colors    {#keys}│";
+          type = "colors";
+          symbol = "circle";
+        }
+        {
+          key = "╰──────────────╯";
+          type = "custom";
+        }
+      ];
+    };
+  };
+}

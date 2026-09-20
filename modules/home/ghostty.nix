@@ -1,0 +1,30 @@
+{...}: {
+  programs.ghostty = {
+    enable = true;
+
+    settings = {
+      # command = "${config.home.homeDirectory}/.config/tmux/start.sh";
+
+      font-family = "Maple Mono NF";
+      font-size = 10;
+      font-feature = "-calt";
+
+      window-padding-x = 4;
+      window-padding-y = 0;
+
+      theme = "Kanagawa Wave";
+      background = "#2a2a37";
+
+      cursor-style = "block";
+      cursor-style-blink = false;
+      shell-integration-features = "no-cursor";
+
+      confirm-close-surface = false;
+
+      title = " ";
+      window-inherit-working-directory = true;
+      window-decoration = false;
+      gtk-single-instance = true;
+    };
+  };
+}

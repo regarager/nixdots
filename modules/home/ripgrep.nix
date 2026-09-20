@@ -1,0 +1,13 @@
+{...}: {
+  programs.ripgrep = {
+    enable = true;
+    arguments = [
+      "--hidden"
+      "--follow"
+      "--glob=!.git/*"
+      "--glob=!node_modules/*"
+      "--glob=!.venv/*"
+      "--glob=!__pycache__/*"
+    ];
+  };
+}
