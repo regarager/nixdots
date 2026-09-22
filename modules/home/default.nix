@@ -2,7 +2,6 @@
   imports = [
     ./bat.nix
     ./btop.nix
-    # ./dconf.nix
     ./eza.nix
     ./fastfetch.nix
     ./ghostty.nix
