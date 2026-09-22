@@ -1,12 +1,21 @@
-{...}: {
+{...}:
+{
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "github.com" = {
+        user = "git";
+        identityFile = "/home/redger/.ssh/id_ed25519"; # <-- CHANGE THIS
+        addKeysToAgent = "yes";
+      };
+    };
+  };
+
   programs.git = {
     enable = true;
-    settings = {
-      user = {
-        name = "Redger Xu";
-        email = "redgerxu@gmail.com";
-      };
-      init.defaultBranch = "master";
-    };
+    userName = "Redger Xu";         # <-- CHANGE THIS
+    userEmail = "redgerxu@gmail.com"; # <-- CHANGE THIS
+
+    settings.init.defaultBranch = "master";
   };
 }

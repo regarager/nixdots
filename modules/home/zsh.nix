@@ -30,6 +30,7 @@
       open = "xdg-open";
       senv = "source .venv/bin/activate";
       szsh = "source ~/.zshrc";
+      tmp = "cd /tmp";
       untar = "tar -xvf";
       untgz = "tar -xzvf";
       vzsh = "nvim ~/.zshrc";
