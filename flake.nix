@@ -8,6 +8,9 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     shiko-prompt.url = "github:regarager/shiko-prompt";
     shiko-prompt.inputs.nixpkgs.follows = "nixpkgs";
+    waterfox.url = "github:Hythera/nix-waterfox";
+    stylix.url = "github:nix-community/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -15,14 +18,16 @@
     nixpkgs,
     home-manager,
     shiko-prompt,
+    stylix,
     ...
   } @ inputs: {
-    nixosConfigurations.dots = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixdots = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {inherit inputs;};
 
       modules = [
         ./configuration.nix
+        stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
@@ -36,6 +41,7 @@
             home.homeDirectory = "/home/redger";
             home.stateVersion = "24.05";
             imports = [
+              stylix.homeModules.stylix
               ./modules/home/default.nix
             ];
           };

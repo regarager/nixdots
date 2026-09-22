@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     # important
     git
@@ -54,9 +58,11 @@
     ghostty
     kitty
     firefox
+    inputs.waterfox.packages.${pkgs.stdenv.hostPlatform.system}.waterfox-bin
     nautilus
     vesktop
     gthumb
+    sioyek
 
     # hyprland
     hyprland
@@ -71,5 +77,30 @@
     waypaper
     waybar
     hyprland-qt-support
+    mako
+    keyd
+    grimblast
+    rofi
+    rofi-power-menu
+    brightnessctl
+    wl-clipboard
+
+    # theming
+    gruvbox-gtk-theme
+    gruvbox-plus-icons
+    papirus-folders
+    gruvbox-dark-gtk
+    gruvbox-dark-icons-gtk
+    libsForQt5.qt5ct
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qtstyleplugins
+    qt6Packages.qtwayland
+    qt6Packages.qtstyleplugin-kvantum
+    qt6Packages.qt6ct
+    lazydocker
+    lazygit
+    libappindicator
+    libnotify
   ];
 }

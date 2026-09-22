@@ -110,6 +110,7 @@
       };
 
       markview.enable = true;
+      highlight-colors.enable = true;
 
       lsp = {
         enable = true;

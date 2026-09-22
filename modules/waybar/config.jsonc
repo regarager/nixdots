@@ -16,9 +16,10 @@
     "network"
   ],
   "pulseaudio": {
-    "scroll-step": 5,
     "format": "{icon} {volume}%",
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format-muted": "  {volume}%",
+    "on-click": "wpctl set-sink-mute @DEFAULT_SINK@ toggle",
+    "scroll-step": 0,
     "format-icons": {
       "default": [
         "",

@@ -12,8 +12,7 @@
       window-padding-x = 4;
       window-padding-y = 0;
 
-      theme = "Kanagawa Wave";
-      background = "#2a2a37";
+      theme = "Gruvbox Dark";
 
       cursor-style = "block";
       cursor-style-blink = false;

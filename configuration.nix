@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   imports = [
@@ -12,10 +8,9 @@
     ./modules/envvars.nix
   ];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.fsIdentifier = "provided";
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.editor = false;
+  boot.loader.grub.enable = false;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -42,6 +37,21 @@
   services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.openssh.enable = true;
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"];
+        settings = {
+          main = {
+            capslock = "overload(control, esc)";
+          };
+          otherlayer = {};
+        };
+        extraConfig = "";
+      };
+    };
+  };
 
   services.printing.enable = true;
 
@@ -51,6 +61,7 @@
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
+    wireplumber.enable = true;
     pulse.enable = true;
   };
 
@@ -60,9 +71,6 @@
     isNormalUser = true;
     description = "redger";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [
-      kdePackages.kate
-    ];
   };
 
   system.copySystemConfiguration = false;
