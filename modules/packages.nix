@@ -33,6 +33,7 @@
     btop
     htop
     tmux
+    zellij
 
     # dev tools
     gcc
@@ -67,6 +68,7 @@
 
     # hyprland
     hyprland
+    hyprlock
     hypridle
     hyprpaper
     hyprpolkitagent
