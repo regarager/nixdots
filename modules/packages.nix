@@ -25,6 +25,7 @@
     ripgrep
     tree
     unzip
+    yazi
     zip
     zoxide
 
