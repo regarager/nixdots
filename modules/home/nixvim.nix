@@ -14,8 +14,9 @@
       autoindent = true;
       background = "dark";
       backspace = "indent,eol,start";
-      clipboard.register = "unnamedplus";
-      clipboard.providers.wl-copy.enabled = true;
+      clipboard = "unnamedplus";
+      # clipboard.register = "unnamedplus";
+      # clipboard.providers.wl-copy.enabled = true;
       cursorline = true;
       expandtab = true;
       hlsearch = false;
