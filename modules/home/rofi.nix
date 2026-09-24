@@ -46,7 +46,7 @@
         alternate-normal-foreground: @foreground;
         alternate-normal-background: @bg1;
         selected-normal-foreground:  @fg0;
-        selected-normal-background:  @blue;
+        selected-normal-background:  @green;
 
         /* Urgent State */
         urgent-foreground:           @bright-red;
@@ -67,7 +67,7 @@
         /* Misc Elements */
         lightbg:                     @bg1;
         lightfg:                     @gray;
-        border-color:                @blue;
+        border-color:                @green;
         separatorcolor:              @bg0-hard;
         spacing:                     2;
       }

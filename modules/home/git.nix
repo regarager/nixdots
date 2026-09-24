@@ -13,9 +13,8 @@
 
   programs.git = {
     enable = true;
-    userName = "Redger Xu";         # <-- CHANGE THIS
-    userEmail = "redgerxu@gmail.com"; # <-- CHANGE THIS
-
+    userName = "Redger Xu";
+    userEmail = "redgerxu@gmail.com";
     settings.init.defaultBranch = "master";
   };
 }

@@ -12,6 +12,7 @@
     ./ripgrep.nix
     ./rofi.nix
     ./shiko.nix
+    ./waterfox.nix
     ./waybar.nix
     ./xdg.nix
     ./zoxide.nix

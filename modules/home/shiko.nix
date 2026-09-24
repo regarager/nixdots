@@ -3,6 +3,6 @@
 
   programs.shiko-prompt = {
     enable = true;
-    theme = "themes/default.json";
+    theme = "themes/gruvbox.json";
   };
 }
