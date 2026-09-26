@@ -1,8 +1,10 @@
-{...}: {
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "lua";
     extraConfig = builtins.readFile ../hypr/hyprland.lua;
+
+    systemd.enable = false;
 
     extraLuaFiles = {
       "conf/env.lua" = ../hypr/conf/env.lua;
@@ -22,5 +24,10 @@
     "hypr/hyprpaper.conf".source = ../hypr/hyprpaper.conf;
     "hypr/user.png".source = ../../assets/user.png;
     "wallpaper.jpg".source = ../../assets/wallpaper.jpg;
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [xdg-desktop-portal-hyprland];
   };
 }
