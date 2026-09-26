@@ -88,9 +88,9 @@
   };
 
   nix.settings = {
-    cores = 0; 
-    max-jobs = "auto"; 
-    auto-optimise-store = true; 
+    cores = 0;
+    max-jobs = "auto";
+    auto-optimise-store = true;
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,

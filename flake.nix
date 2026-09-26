@@ -20,32 +20,32 @@
     shiko-prompt,
     stylix,
     ...
-    } @ inputs: {
-      nixosConfigurations.nixdots = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {inherit inputs;};
+  } @ inputs: {
+    nixosConfigurations.nixdots = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {inherit inputs;};
 
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "hm-bak";
+      modules = [
+        ./configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "hm-bak";
 
-            home-manager.extraSpecialArgs = {inherit inputs;}; # for HM modules
+          home-manager.extraSpecialArgs = {inherit inputs;}; # for HM modules
 
-            home-manager.users.redger = {
-              home.username = "redger";
-              home.homeDirectory = "/home/redger";
-              home.stateVersion = "24.05";
-              imports = [
-                stylix.homeModules.stylix
-                ./modules/home/default.nix
-              ];
-            };
-          }
-        ];
-      };
+          home-manager.users.redger = {
+            home.username = "redger";
+            home.homeDirectory = "/home/redger";
+            home.stateVersion = "24.05";
+            imports = [
+              stylix.homeModules.stylix
+              ./modules/home/default.nix
+            ];
+          };
+        }
+      ];
     };
+  };
 }
