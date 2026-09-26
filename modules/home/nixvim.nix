@@ -4,8 +4,9 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    colorschemes.gruvbox.enable = true;
     vimAlias = true;
+
+    colorschemes.gruvbox.enable = true;
 
     globals.mapleader = " ";
 
@@ -15,8 +16,6 @@
       background = "dark";
       backspace = "indent,eol,start";
       clipboard = "unnamedplus";
-      # clipboard.register = "unnamedplus";
-      # clipboard.providers.wl-copy.enabled = true;
       cursorline = true;
       expandtab = true;
       hlsearch = false;

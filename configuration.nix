@@ -3,9 +3,9 @@
 
   imports = [
     ./hardware-configuration.nix
+    ./modules/envvars.nix
     ./modules/fonts.nix
     ./modules/packages.nix
-    ./modules/envvars.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -85,6 +85,12 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
+  };
+
+  nix.settings = {
+    cores = 0; 
+    max-jobs = "auto"; 
+    auto-optimise-store = true; 
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,

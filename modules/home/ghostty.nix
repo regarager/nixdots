@@ -12,8 +12,6 @@
       window-padding-x = 4;
       window-padding-y = 0;
 
-      theme = "Gruvbox Dark";
-
       cursor-style = "block";
       cursor-style-blink = false;
       shell-integration-features = "no-cursor";

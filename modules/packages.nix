@@ -101,8 +101,6 @@
     qt6Packages.qtwayland
     qt6Packages.qtstyleplugin-kvantum
     qt6Packages.qt6ct
-    lazydocker
-    lazygit
     libappindicator
     libnotify
   ];

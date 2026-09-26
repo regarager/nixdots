@@ -2,12 +2,9 @@
   services.mako = {
     enable = true;
     settings = {
-      background-color = "#1f1f28ff";
-      border-color = "#7e9cd8ff";
       border-radius = 8;
       border-size = 2;
       default-timeout = 3000;
-      font = "Maple Mono NF 10";
       height = 240;
       layer = "overlay";
       padding = 12;
