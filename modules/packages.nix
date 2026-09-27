@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     # important
     git
+    delta
     curl
     wget
     zsh
