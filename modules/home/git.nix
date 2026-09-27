@@ -1,7 +1,8 @@
 {...}: {
   programs.ssh = {
     enable = true;
-    matchBlocks = {
+    enableDefaultConfig = false; 
+    settings = {
       "github.com" = {
         user = "git";
         identityFile = "/home/redger/.ssh/id_ed25519";
@@ -12,19 +13,23 @@
 
   programs.git = {
     enable = true;
-    userName = "Redger Xu";
-    userEmail = "redgerxu@gmail.com";
-    settings.init.defaultBranch = "master";
-    extraConfig = {
-      core.pager = "delta";
-      interactive.diffFilter = "delta --color-only";
-      delta = {
-        navigate = true;
-        theme = "gruvbox-dark";
-        features = "side-by-side";
+    settings = {
+      user = {
+        name = "Redger Xu";
+        email = "redgerxu@gmail.com";
       };
-      merge.conflictStyle = "zdiff3";
       init.defaultBranch = "master";
+      merge.conflictStyle = "zdiff3";
+    };
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options = {
+      navigate = true;
+      theme = "gruvbox-dark";
+      features = "side-by-side";
     };
   };
 }

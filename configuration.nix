@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./modules/envvars.nix
     ./modules/fonts.nix
+    ./modules/keyd.nix
     ./modules/packages.nix
   ];
 
@@ -37,21 +38,6 @@
   services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.openssh.enable = true;
-  services.keyd = {
-    enable = true;
-    keyboards = {
-      default = {
-        ids = ["*"];
-        settings = {
-          main = {
-            capslock = "overload(control, esc)";
-          };
-          otherlayer = {};
-        };
-        extraConfig = "";
-      };
-    };
-  };
 
   services.printing.enable = true;
 
