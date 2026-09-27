@@ -26,4 +26,5 @@
 
   stylix.targets.nixvim.enable = false;
   stylix.targets.waybar.enable = false;
+  stylix.targets.fzf.enable = false;
 }

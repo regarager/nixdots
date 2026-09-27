@@ -92,7 +92,7 @@
         min-height: 0;
         font-family: "Maple Mono NF";
         font-size: 14px;
-        color: #${config.lib.stylix.colors.base07};
+        color: ${config.lib.stylix.colors.withHashtag.base07};
       }
 
       window#waybar {
@@ -118,7 +118,7 @@
       }
 
       #workspaces button.active {
-        border-bottom: 2px solid #${config.lib.stylix.colors.base07};
+        border-bottom: 2px solid ${config.lib.stylix.colors.withHashtag.base07};
       }
 
       #workspaces button:hover {
@@ -152,7 +152,7 @@
       }
 
       tooltip {
-        background: #${config.lib.stylix.colors.base01};
+        background: ${config.lib.stylix.colors.withHashtag.base01};
       }
 
       .modules-left, .modules-right {

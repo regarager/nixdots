@@ -15,7 +15,6 @@
     eza
     fastfetch
     fd
-    fzf
     gh
     imagemagick
     less
@@ -33,7 +32,6 @@
     btop
     htop
     tmux
-    zellij
 
     # dev tools
     gcc
