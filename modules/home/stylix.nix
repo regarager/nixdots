@@ -25,4 +25,5 @@
   };
 
   stylix.targets.nixvim.enable = false;
+  stylix.targets.waybar.enable = false;
 }
