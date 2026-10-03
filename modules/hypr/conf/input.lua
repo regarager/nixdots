@@ -1,6 +1,6 @@
 hl.config({
 	input = {
-		kb_layout = "us,de",
+		kb_layout = "us,pl",
 		kb_options = "grp:alt_altgr_toggle",
 		follow_mouse = 1,
 		sensitivity = 0,

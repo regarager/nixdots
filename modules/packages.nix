@@ -35,32 +35,32 @@
     tmux
 
     # dev tools
-    gcc
-    rustup
-    nodejs
-    jdk
-    prettier
-    uv
-    lua
-    cmake
-    pyright
-    rust-analyzer
-    lua-language-server
+    alejandra
     black
+    cmake
+    gcc
     isort
+    openjdk
+    lua
+    lua-language-server
+    nixd
+    nodejs
+    prettier
+    pyright
+    python3
+    rust-analyzer
+    rustup
     stylua
-    typst
     tinymist
     tree-sitter
-    nixd
-    alejandra
+    typst
+    uv
 
     # other programs
     ghostty
     kitty
     firefox
     inputs.waterfox.packages.${pkgs.stdenv.hostPlatform.system}.waterfox-bin
-    nautilus
     vesktop
     gthumb
     sioyek
@@ -86,8 +86,6 @@
     rofi-power-menu
     brightnessctl
     wl-clipboard
-
-    # theming
     gruvbox-gtk-theme
     gruvbox-plus-icons
     papirus-folders

@@ -1,6 +1,6 @@
 return {
   browser = "waterfox",
   terminal = "ghostty",
-  fileManager = "nautilus",
+  fileManager = "dolphin",
   menu = "pidof rofi || rofi -i -show drun"
 }

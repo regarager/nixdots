@@ -111,6 +111,7 @@
 
       markview.enable = true;
       highlight-colors.enable = true;
+      gitsigns.enable = true;
 
       lsp = {
         enable = true;
