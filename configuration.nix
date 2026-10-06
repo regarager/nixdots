@@ -20,11 +20,9 @@
   networking.wireless.enable = true;
   networking.networkmanager.enable = true;
   environment.etc.hosts.mode = "0700"; # makes /etc/hosts writable
-  
+
   time.timeZone = "America/Los_Angeles";
-
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";

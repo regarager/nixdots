@@ -9,10 +9,10 @@
         modules-center = ["clock"];
         modules-right = [
           "tray"
-          "hyprland/language"
           "pulseaudio"
           "temperature"
           "cpu"
+          "memory"
           "battery"
           "network"
         ];
@@ -31,7 +31,6 @@
           };
         };
         network = {
-          format-wifi = "{ifname}";
           tooltip-format-wifi = "{essid}";
         };
         temperature = {
@@ -78,9 +77,6 @@
           interval = 5;
           format = " {}%";
           max-length = 10;
-        };
-        "hyprland/language" = {
-          format = "{shortDescription}";
         };
       };
     };
@@ -135,7 +131,6 @@
       #clock,
       #cpu,
       #custom-power,
-      #language,
       #memory,
       #network,
       #pulseaudio,
