@@ -8,6 +8,7 @@
     ./git.nix
     ./hyprland.nix
     ./mako.nix
+    ./mango.nix
     ./nixvim.nix
     ./ripgrep.nix
     ./rofi.nix

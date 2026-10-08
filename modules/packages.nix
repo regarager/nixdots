@@ -33,6 +33,7 @@
     btop
     htop
     tmux
+    pi-coding-agent
 
     # dev tools
     alejandra
@@ -70,6 +71,8 @@
     hyprlock
     hypridle
     hyprpaper
+    swaybg
+    hyprpicker
     hyprpolkitagent
     hyprshot
     hyprcursor

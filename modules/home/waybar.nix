@@ -5,7 +5,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        modules-left = ["hyprland/workspaces"];
+        modules-left = ["ext/workspaces"];
         modules-center = ["clock"];
         modules-right = [
           "tray"
@@ -17,6 +17,11 @@
           "network"
         ];
 
+        "ext/workspaces" = {
+          format = "{name}";
+          on-click = "activate";
+          on-click-right = "deactivate";
+        };
         pulseaudio = {
           format = "{icon} {volume}%";
           format-muted = "  {volume}%";
@@ -117,6 +122,10 @@
         border-bottom: 2px solid ${config.lib.stylix.colors.withHashtag.base07};
       }
 
+      #workspaces button.hidden {
+        color: ${config.lib.stylix.colors.withHashtag.base04};
+      }
+
       #workspaces button:hover {
         font-weight: 900;
       }
@@ -148,15 +157,6 @@
 
       tooltip {
         background: ${config.lib.stylix.colors.withHashtag.base01};
-      }
-
-      .modules-left, .modules-right {
-        margin-left: 16px;
-        margin-right: 16px;
-      }
-
-      .modules-left, .modules-right, .modules-center {
-        margin-top: 8px;
       }
     '';
   };
