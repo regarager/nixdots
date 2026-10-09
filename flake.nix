@@ -11,6 +11,8 @@
     waterfox.url = "github:Hythera/nix-waterfox";
     stylix.url = "github:nix-community/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
+    mango.url = "github:mangowm/mango";
+    mango.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -19,6 +21,7 @@
     home-manager,
     shiko-prompt,
     stylix,
+    mango,
     ...
   } @ inputs: {
     nixosConfigurations.nixdots = nixpkgs.lib.nixosSystem {
@@ -41,6 +44,7 @@
             home.stateVersion = "24.05";
             imports = [
               stylix.homeModules.stylix
+              mango.hmModules.mango
               ./modules/home/default.nix
             ];
           };

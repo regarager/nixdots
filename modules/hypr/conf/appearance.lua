@@ -1,7 +1,7 @@
 hl.config({
   general = {
     gaps_in = 4,
-    gaps_out = 16,
+    gaps_out = 0,
     border_size = 2,
     resize_on_border = true,
     allow_tearing = false,
@@ -23,6 +23,9 @@ hl.config({
     disable_hyprland_logo = false,
     allow_session_lock_restore = 1,
   },
+  animations = {
+    enabled = false;
+  };
 })
 
 hl.layer_rule({ match = { namespace = "hyprpicker" }, no_anim = true })
