@@ -13,6 +13,8 @@
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     mango.url = "github:mangowm/mango";
     mango.inputs.nixpkgs.follows = "nixpkgs";
+    msnap.url = "github:xtheeq/msnap";
+    msnap.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -22,6 +24,7 @@
     shiko-prompt,
     stylix,
     mango,
+    msnap,
     ...
   } @ inputs: {
     nixosConfigurations.nixdots = nixpkgs.lib.nixosSystem {
@@ -29,6 +32,7 @@
       specialArgs = {inherit inputs;};
 
       modules = [
+        {nixpkgs.overlays = [msnap.overlays.default];}
         ./configuration.nix
         home-manager.nixosModules.home-manager
         {

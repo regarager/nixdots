@@ -55,6 +55,7 @@
       untgz = "tar -xzvf";
       vzsh = "nvim ~/.zshrc";
       gst = "git status";
+      ns = "nix-shell --command 'exec zsh'";
     };
   };
 

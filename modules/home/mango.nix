@@ -88,7 +88,9 @@
 
       layerrule = [
         "noanim:1,layer_name:hyprpicker"
-        "noanim:1,layer_name:selection"
+        "noanim:1,noblur:1,layer_name:selection"
+        "noanim:1,noblur:1,layer_name:wayfreeze"
+        "noanim:1,noblur:1,layer_name:msnap"
       ];
 
       focus_on_activate = 0;
@@ -168,9 +170,9 @@
       ];
 
       bindr = [
-        "CTRL+ALT,3,spawn_shell,grimblast --notify --freeze copysave output ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png"
+        "CTRL+ALT,3,spawn,msnap shot --freeze"
         "CTRL+ALT,4,spawn,hyprpicker --autocopy --format=hex --lower"
-        "CTRL+ALT,5,spawn_shell,grimblast --notify --freeze copysave area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png"
+        "CTRL+ALT,5,spawn,msnap shot --region --freeze"
       ];
 
       mousebind = [

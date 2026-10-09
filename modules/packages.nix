@@ -18,6 +18,7 @@
     fd
     gh
     imagemagick
+    jq
     less
     net-tools
     pay-respects
@@ -85,6 +86,7 @@
     mako
     keyd
     grimblast
+    msnap
     rofi
     rofi-power-menu
     brightnessctl
