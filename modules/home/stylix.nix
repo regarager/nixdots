@@ -24,6 +24,14 @@
     };
   };
 
+  # Stylix sets `nixpkgs.overlays`, which conflicts with
+  # `home-manager.useGlobalPkgs = true` (the overlays are ignored there anyway).
+  stylix.overlays.enable = false;
+
+  # Rofi is configured manually, and stylix currently defines the renamed
+  # `programs.rofi.font` option.
+  stylix.targets.rofi.enable = false;
+
   stylix.targets.nixvim.enable = false;
   stylix.targets.waybar.enable = false;
   stylix.targets.fzf.enable = false;
