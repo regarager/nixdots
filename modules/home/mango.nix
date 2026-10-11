@@ -7,7 +7,6 @@
       env = [
         "ELECTRON_OZONE_PLATFORM_HINT,wayland"
         "XCURSOR_SIZE,24"
-        "HYPRCURSOR_SIZE,24"
         "XDG_SESSION_TYPE,wayland"
         "QT_QPA_PLATFORM,wayland"
         "QT_QPA_PLATFORMTHEME,qt5ct"

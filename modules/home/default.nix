@@ -6,7 +6,7 @@
     ./fastfetch.nix
     ./ghostty.nix
     ./git.nix
-    ./hyprland.nix
+    ./gpg.nix
     ./mako.nix
     ./mango.nix
     ./nixvim.nix

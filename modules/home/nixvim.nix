@@ -10,6 +10,10 @@
 
     globals.mapleader = " ";
 
+    diagnostic.settings = {
+      virtual_text = true;
+    };
+
     opts = {
       mouse = "";
       autoindent = true;

@@ -414,11 +414,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790208178,
-        "narHash": "sha256-IGqFvXGFvZADY3ehnwGgwEZuIn5jhySB1OrBQIsceU0=",
+        "lastModified": 1791328196,
+        "narHash": "sha256-QKlI5ZRCdiTpDvd6WsBPDVrqRBMsbukqK1TMVNUIaTA=",
         "owner": "regarager",
         "repo": "shiko-prompt",
-        "rev": "c4e927fa23dd3bd7bd65d9f157864ba66818d448",
+        "rev": "021362190d9d90a1732bd9e87461d547ee2bc6cc",
         "type": "github"
       },
       "original": {

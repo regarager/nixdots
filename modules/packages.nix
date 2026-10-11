@@ -34,6 +34,8 @@
     btop
     htop
     tmux
+    gnupg
+    pinentry-gnome3
     pi-coding-agent
 
     # dev tools
@@ -67,22 +69,17 @@
     gthumb
     sioyek
 
-    # hyprland
-    hyprland
+    # mango
+    polkit_gnome
     hyprlock
     hypridle
-    hyprpaper
     swaybg
     hyprpicker
-    hyprpolkitagent
-    hyprshot
-    hyprcursor
     mesa
     nwg-displays
     nwg-look
     waypaper
     waybar
-    hyprland-qt-support
     mako
     keyd
     grimblast
