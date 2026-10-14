@@ -1,4 +1,8 @@
-{pkgs, config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   wayland.windowManager.mango = {
     enable = true;
     package = pkgs.mango;
@@ -32,7 +36,7 @@
       focuscolor = "0x${config.lib.stylix.colors.base0B}ff";
       allow_tearing = 0;
 
-      tagrule = [ "id:*,layout_name:tile" ];
+      tagrule = ["id:*,layout_name:tile"];
       new_is_master = 0;
       default_mfact = 0.55;
       default_nmaster = 1;
@@ -122,7 +126,8 @@
         "SUPER+SHIFT,l,spawn,hyprlock"
         "SUPER,e,spawn,dolphin"
         "SUPER,v,togglefloating"
-        "SUPER,space,spawn_shell,pidof rofi || rofi -i -show drun"
+        # "SUPER,space,spawn_shell,pidof rofi || rofi -i -show drun"
+        "SUPER,space,spawn_shell,pidof fuzzel || fuzzel"
         "SUPER,p,togglemaximizescreen"
 
         "SUPER,h,focusdir,left"
@@ -154,7 +159,8 @@
 
         "SUPER+SHIFT,f,togglefullscreen"
 
-        "SUPER,backspace,spawn,rofi -show p -modi p:rofi-power-menu"
+        # "SUPER,backspace,spawn,rofi -show p -modi p:rofi-power-menu"
+        # "SUPER,backspace,spawn_shell,choice=$(printf 'lock\nsuspend\nreboot\nshutdown\n' | fuzzel --dmenu -p 'Power: ') && case $choice in lock) hyprlock;; suspend) systemctl suspend;; reboot) systemctl reboot;; shutdown) systemctl poweroff;; esac"
 
         "SUPER+SHIFT,r,reload_config"
 
@@ -211,8 +217,6 @@
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [xdg-desktop-portal-gtk xdg-desktop-portal-wlr];
-
-    # xdg-desktop-portal 1.17+ requires explicit backend selection.
     config.common.default = "*";
   };
 }

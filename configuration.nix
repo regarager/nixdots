@@ -63,10 +63,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.firefox.enable = true;
-  programs.mango.enable = true;
-  programs.xwayland.enable = true;
   programs.zsh.enable = true;
+  programs.xwayland.enable = true;
   programs.nh = {
     enable = true;
     clean.enable = true;
@@ -81,9 +79,9 @@
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     description = "polkit-gnome-authentication-agent-1";
-    wantedBy = [ "graphical-session.target" ];
-    wants = [ "graphical-session.target" ];
-    after = [ "graphical-session.target" ];
+    wantedBy = ["graphical-session.target"];
+    wants = ["graphical-session.target"];
+    after = ["graphical-session.target"];
     serviceConfig = {
       Type = "simple";
       ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";

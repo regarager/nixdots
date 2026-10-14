@@ -1,7 +1,7 @@
 {...}: {
   programs.ssh = {
     enable = true;
-    enableDefaultConfig = false; 
+    enableDefaultConfig = false;
     settings = {
       "github.com" = {
         user = "git";
