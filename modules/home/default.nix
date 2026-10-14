@@ -4,6 +4,8 @@
     ./btop.nix
     ./eza.nix
     ./fastfetch.nix
+    ./firefox.nix
+    ./fuzzel.nix
     ./ghostty.nix
     ./git.nix
     ./gpg.nix

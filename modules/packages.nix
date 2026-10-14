@@ -4,17 +4,9 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    # important
-    git
-    delta
+    # cli
     curl
     wget
-    zsh
-
-    # cli tools
-    bat
-    eza
-    fastfetch
     fd
     gh
     imagemagick
@@ -23,19 +15,13 @@
     net-tools
     pay-respects
     pokeget-rs
-    ripgrep
     tree
     unzip
     yazi
     zip
-    zoxide
 
     # cli programs
-    btop
-    htop
     tmux
-    gnupg
-    pinentry-gnome3
     pi-coding-agent
 
     # dev tools
@@ -78,10 +64,6 @@
     mesa
     nwg-displays
     nwg-look
-    waypaper
-    waybar
-    mako
-    keyd
     grimblast
     msnap
     rofi
@@ -93,7 +75,6 @@
     papirus-folders
     gruvbox-dark-gtk
     gruvbox-dark-icons-gtk
-    libsForQt5.qt5ct
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugins
