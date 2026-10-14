@@ -13,7 +13,6 @@
     ./mango.nix
     ./nixvim.nix
     ./ripgrep.nix
-    ./rofi.nix
     ./shiko.nix
     ./stylix.nix
     ./waterfox.nix

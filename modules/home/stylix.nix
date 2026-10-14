@@ -32,7 +32,6 @@
       profileNames = ["default"];
       colorTheme.enable = true;
     };
-    targets.rofi.enable = false;
     targets.fuzzel.enable = false;
     targets.nixvim.enable = false;
     targets.waybar.enable = false;

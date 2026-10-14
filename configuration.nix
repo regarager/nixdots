@@ -63,6 +63,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  programs.mango.enable = true;
   programs.zsh.enable = true;
   programs.xwayland.enable = true;
   programs.nh = {

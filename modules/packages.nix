@@ -66,8 +66,6 @@
     nwg-look
     grimblast
     msnap
-    rofi
-    rofi-power-menu
     brightnessctl
     wl-clipboard
     gruvbox-gtk-theme

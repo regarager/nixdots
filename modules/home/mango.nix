@@ -126,8 +126,8 @@
         "SUPER+SHIFT,l,spawn,hyprlock"
         "SUPER,e,spawn,dolphin"
         "SUPER,v,togglefloating"
-        # "SUPER,space,spawn_shell,pidof rofi || rofi -i -show drun"
         "SUPER,space,spawn_shell,pidof fuzzel || fuzzel"
+        "SUPER,backspace,spawn,fuzzel-power-menu"
         "SUPER,p,togglemaximizescreen"
 
         "SUPER,h,focusdir,left"
@@ -158,10 +158,6 @@
         "SUPER,bracketleft,viewtoleft"
 
         "SUPER+SHIFT,f,togglefullscreen"
-
-        # "SUPER,backspace,spawn,rofi -show p -modi p:rofi-power-menu"
-        # "SUPER,backspace,spawn_shell,choice=$(printf 'lock\nsuspend\nreboot\nshutdown\n' | fuzzel --dmenu -p 'Power: ') && case $choice in lock) hyprlock;; suspend) systemctl suspend;; reboot) systemctl reboot;; shutdown) systemctl poweroff;; esac"
-
         "SUPER+SHIFT,r,reload_config"
 
         "NONE,XF86MonBrightnessUp,spawn,brightnessctl set +5%"

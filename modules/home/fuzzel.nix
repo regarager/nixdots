@@ -1,4 +1,39 @@
-{config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: let
+  fuzzel-power-menu = pkgs.writeShellApplication {
+    name = "fuzzel-power-menu";
+    runtimeInputs = [
+      config.programs.fuzzel.package
+      pkgs.hyprlock
+      pkgs.systemd
+    ];
+    text = ''
+      choices=$'Lock\t\uf023  Lock'
+      choices+=$'\nLog out\t\uf08b  Log out'
+      choices+=$'\nSuspend\t\uf4b2  Suspend'
+      choices+=$'\nReboot\t\uf021  Reboot'
+      choices+=$'\nShut down\t\uf011  Shut down'
+
+      sel=$(printf '%s\n' "$choices" | cut -f2 | fuzzel --dmenu -p '> ' --lines 5 --width 32 || true)
+      [ -z "$sel" ] && exit 0
+
+      key=$(printf '%s\n' "$choices" | while IFS=$'\t' read -r k v; do
+        if [ "$v" = "$sel" ]; then printf '%s\n' "$k"; fi
+      done)
+
+      case "$key" in
+        Lock) hyprlock ;;
+        "Log out") loginctl terminate-user "$USER" ;;
+        Suspend) systemctl suspend ;;
+        Reboot) systemctl reboot ;;
+        "Shut down") systemctl poweroff ;;
+      esac
+    '';
+  };
+in {
   programs.fuzzel = {
     enable = true;
     settings = {
@@ -34,4 +69,6 @@
       };
     };
   };
+
+  home.packages = [fuzzel-power-menu];
 }
