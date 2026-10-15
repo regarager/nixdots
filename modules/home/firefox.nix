@@ -11,7 +11,6 @@
       DisableSetDesktopBackground = true;
       DontCheckDefaultBrowser = true;
       NoDefaultBookmarks = true;
-      OfferToSaveLogins = false;
       OverrideFirstRunPage = "";
       OverridePostUpdatePage = "";
 
@@ -81,6 +80,7 @@
     profiles.default = {
       isDefault = true;
       extensions.force = true;
+
       settings = {
         "app.normandy.api_url" = "";
         "app.normandy.enabled" = false;
@@ -143,6 +143,7 @@
         "browser.vpn_promo.enabled" = false;
         "datareporting.healthreport.uploadEnabled" = false;
         "datareporting.policy.dataSubmissionEnabled" = false;
+        "extensions.autoDisableScopes" = 0;
         "extensions.getAddons.showPane" = false;
         "extensions.htmlaboutaddons.recommendations.enabled" = false;
         "extensions.pocket.api" = "";
@@ -162,6 +163,10 @@
         "services.sync.engine.passwords" = false;
         "services.sync.engine.prefs" = false;
         "services.sync.engine.tabs" = false;
+        "sidebar.main.tools" = "opentabs";
+        "sidebar.newTool.migration.passwords" = ''{"visibilityPref":"browser.contextual-password-manager.enabled","alreadyShown":true}'';
+        "sidebar.revamp" = true;
+        "sidebar.verticalTabs" = true;
         "toolkit.telemetry.archive.enabled" = false;
         "toolkit.telemetry.bhrPing.enabled" = false;
         "toolkit.telemetry.enabled" = false;
@@ -171,7 +176,6 @@
         "toolkit.telemetry.shutdownPingSender.enabled" = false;
         "toolkit.telemetry.unified" = false;
         "toolkit.telemetry.updatePing.enabled" = false;
-        "extensions.autoDisableScopes" = 0;
       };
     };
   };

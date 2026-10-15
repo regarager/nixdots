@@ -32,7 +32,7 @@
       gappoh = 0;
       gappov = 0;
       borderpx = 2;
-      # Active window border, from the Stylix palette (base0B, gruvbox lime green).
+
       focuscolor = "0x${config.lib.stylix.colors.base0B}ff";
       allow_tearing = 0;
 
@@ -121,7 +121,7 @@
 
       bind = [
         "SUPER,t,spawn,ghostty"
-        "SUPER,f,spawn,waterfox"
+        "SUPER,f,spawn,firefox"
         "SUPER,q,killclient"
         "SUPER+SHIFT,l,spawn,hyprlock"
         "SUPER,e,spawn,dolphin"
@@ -189,9 +189,8 @@
         "waybar"
         "mako"
         "mpd"
-        "/run/current-system/sw/libexec/hyprpolkitagent"
         "vesktop"
-        "waterfox"
+        "firefox"
       ];
 
       overviewgappi = 5;
