@@ -41,6 +41,7 @@
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  security.pam.services.swaylock = {};
   services.pipewire = {
     enable = true;
     alsa.enable = true;

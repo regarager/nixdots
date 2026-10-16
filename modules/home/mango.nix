@@ -123,7 +123,7 @@
         "SUPER,t,spawn,ghostty"
         "SUPER,f,spawn,firefox"
         "SUPER,q,killclient"
-        "SUPER+SHIFT,l,spawn,hyprlock"
+        "SUPER+SHIFT,l,spawn,swaylock"
         "SUPER,e,spawn,dolphin"
         "SUPER,v,togglefloating"
         "SUPER,space,spawn_shell,pidof fuzzel || fuzzel"
@@ -185,7 +185,7 @@
 
       "exec-once" = [
         "swaybg -i ~/.config/wallpaper.jpg -m fill"
-        "hypridle"
+        "swayidle -w"
         "waybar"
         "mako"
         "mpd"
@@ -203,9 +203,8 @@
   };
 
   xdg.configFile = {
-    "hypr/hypridle.conf".source = ../hypr/hypridle.conf;
-    "hypr/hyprlock.conf".source = ../hypr/hyprlock.conf;
-    "hypr/user.png".source = ../../assets/user.png;
+    "swayidle/config".source = ../sway/swayidle.conf;
+    "swaylock/config".source = ../sway/swaylock.conf;
     "wallpaper.jpg".source = ../../assets/wallpaper.jpg;
   };
 

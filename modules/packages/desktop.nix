@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     polkit_gnome
-    hyprlock
-    hypridle
+    swaylock
+    swayidle
     swaybg
     hyprpicker
     mesa

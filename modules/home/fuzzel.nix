@@ -7,7 +7,7 @@
     name = "fuzzel-power-menu";
     runtimeInputs = [
       config.programs.fuzzel.package
-      pkgs.hyprlock
+      pkgs.swaylock
       pkgs.systemd
     ];
     text = ''
@@ -25,7 +25,7 @@
       done)
 
       case "$key" in
-        Lock) hyprlock ;;
+        Lock) swaylock ;;
         "Log out") loginctl terminate-user "$USER" ;;
         Suspend) systemctl suspend ;;
         Reboot) systemctl reboot ;;
