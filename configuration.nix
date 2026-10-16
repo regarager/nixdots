@@ -6,8 +6,7 @@
     ./modules/envvars.nix
     ./modules/fonts.nix
     ./modules/keyd.nix
-    ./modules/packages.nix
-    ./modules/ctf-packages.nix
+    ./modules/packages
   ];
 
   boot.loader.systemd-boot.enable = true;

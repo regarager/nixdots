@@ -1,4 +1,8 @@
-{...}: {
+{lib, ...}: {
+  home.activation.createDefaultDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    run mkdir -p "$HOME/Projects" "$HOME/Videos" "$HOME/Pictures/Screenshots" "$HOME/Notes"
+  '';
+
   xdg.mimeApps.enable = true;
   xdg.mimeApps.defaultApplications = {
     "text/html" = "firefox.desktop";
