@@ -79,6 +79,7 @@
 
       conform-nvim = {
         enable = true;
+        autoInstall.enable = true;
         settings = {
           formatters_by_ft = {
             c = ["clang-format"];
@@ -86,7 +87,12 @@
             lua = ["stylua"];
             python = ["ruff_fix" "ruff_format" "ruff_organize_imports"];
             rust = ["rustfmt"];
+            nix = ["alejandra"];
             typst = ["typstyle"];
+            javascript = ["prettier"];
+            typescript = ["prettier"];
+            html = ["prettier"];
+            css = ["prettier"];
             "*" = ["trim_whitespace"];
           };
         };
@@ -121,12 +127,14 @@
         enable = true;
         servers = {
           clangd.enable = true;
+          harper_ls.enable = true;
           lua_ls.enable = true;
           nixd.enable = true;
           pyright.enable = true;
           rust_analyzer.enable = true;
           rust_analyzer.installRustc = true;
           rust_analyzer.installCargo = true;
+          tinymist.enable = true;
         };
       };
     };
