@@ -185,7 +185,6 @@
 
       "exec-once" = [
         "swaybg -i ~/.config/wallpaper.jpg -m fill"
-        "swayidle -w"
         "waybar"
         "mako"
         "mpd"
@@ -203,8 +202,6 @@
   };
 
   xdg.configFile = {
-    "swayidle/config".source = ../sway/swayidle.conf;
-    "swaylock/config".source = ../sway/swaylock.conf;
     "wallpaper.jpg".source = ../../assets/wallpaper.jpg;
   };
 

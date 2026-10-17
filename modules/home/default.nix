@@ -15,6 +15,8 @@
     ./ripgrep.nix
     ./shiko.nix
     ./stylix.nix
+    ./swayidle.nix
+    ./swaylock.nix
     ./waterfox.nix
     ./waybar.nix
     ./xdg.nix

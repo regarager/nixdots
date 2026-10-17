@@ -34,6 +34,7 @@
     };
     targets.fuzzel.enable = false;
     targets.nixvim.enable = false;
+    targets.swaylock.enable = false;
     targets.waybar.enable = false;
     targets.fzf.enable = false;
   };
