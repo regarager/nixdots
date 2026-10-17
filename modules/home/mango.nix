@@ -20,26 +20,26 @@
         "GDK_SCALE,2"
       ];
 
-      monitorrule = [
+      monitor_rule = [
         "name:^DP-1$,width:1920,height:1080,refresh:60,x:0,y:0,scale:1"
         "name:^HDMI-A-1$"
         "name:^eDP-1$,scale:2"
       ];
       xwayland_ignore_scale = 1;
 
-      gappih = 4;
-      gappiv = 4;
-      gappoh = 0;
-      gappov = 0;
-      borderpx = 2;
+      gap_inner_horizontal = 4;
+      gap_inner_vertical = 4;
+      gap_outer_horizontal = 0;
+      gap_outer_vertical = 0;
+      border_px = 2;
 
-      focuscolor = "0x${config.lib.stylix.colors.base0B}ff";
+      focus_color = "0x${config.lib.stylix.colors.base0B}ff";
       allow_tearing = 0;
 
-      tagrule = ["id:*,layout_name:tile"];
+      tag_rule = ["id:*,layout_name:tile"];
       new_is_master = 0;
-      default_mfact = 0.55;
-      default_nmaster = 1;
+      default_master_factor = 0.55;
+      default_master_count = 1;
       tag_num = 9;
 
       border_radius = 0;
@@ -66,8 +66,8 @@
       animation_fade_out = 1;
       zoom_initial_ratio = 0.4;
       zoom_end_ratio = 0.8;
-      fadein_begin_opacity = 0.5;
-      fadeout_begin_opacity = 0.8;
+      fade_in_begin_opacity = 0.5;
+      fade_out_begin_opacity = 0.8;
       animation_duration_move = 250;
       animation_duration_open = 250;
       animation_duration_tag = 350;
@@ -78,31 +78,31 @@
       animation_curve_tag = "0.0,0.0,0.12,1.0";
       animation_curve_close = "0.0,0.0,0.12,1.0";
       animation_curve_focus = "0.0,0.0,0.12,1.0";
-      animation_curve_opafadein = "0.0,0.0,0.12,1.0";
-      animation_curve_opafadeout = "0.0,0.0,0.12,1.0";
+      animation_curve_opacity_fade_in = "0.0,0.0,0.12,1.0";
+      animation_curve_opacity_fade_out = "0.0,0.0,0.12,1.0";
       tag_animation_direction = 1;
 
-      windowrule = [
-        "ignore_maximize:1,appid:.*"
-        "isfloating:1,width:800,height:600,appid:xdg-desktop-portal-gtk"
-        "globalkeybinding:ctrl+shift-m,appid:vesktop"
-        "tags:1,appid:vesktop"
+      window_rule = [
+        "ignore_maximize:1,app_id:.*"
+        "is_floating:1,width:800,height:600,app_id:xdg-desktop-portal-gtk"
+        "global_key_binding:ctrl+shift-m,app_id:vesktop"
+        "tags:1,app_id:vesktop"
       ];
 
-      layerrule = [
-        "noanim:1,layer_name:hyprpicker"
-        "noanim:1,noblur:1,layer_name:selection"
-        "noanim:1,noblur:1,layer_name:wayfreeze"
-        "noanim:1,noblur:1,layer_name:msnap"
+      layer_rule = [
+        "no_animation:1,layer_name:hyprpicker"
+        "no_animation:1,no_blur:1,layer_name:selection"
+        "no_animation:1,no_blur:1,layer_name:wayfreeze"
+        "no_animation:1,no_blur:1,layer_name:msnap"
       ];
 
       focus_on_activate = 0;
-      warpcursor = 0;
+      warp_cursor = 0;
 
       xkb_rules_layout = "pl";
       xkb_rules_options = "grp:alt_altgr_toggle";
 
-      sloppyfocus = 1;
+      sloppy_focus = 1;
 
       mouse_accel_profile = 1;
       mouse_accel_speed = 0.0;
@@ -183,7 +183,7 @@
 
       tag_carousel = 1;
 
-      "exec-once" = [
+      exec_once = [
         "swaybg -i ~/.config/wallpaper.jpg -m fill"
         "waybar"
         "mako"
@@ -192,8 +192,8 @@
         "firefox"
       ];
 
-      overviewgappi = 5;
-      overviewgappo = 30;
+      overview_gap_inner = 5;
+      overview_gap_outer = 30;
       hotarea_size = 10;
       enable_hotarea = 0;
       hotarea_disable_on_fullscreen = 1;
