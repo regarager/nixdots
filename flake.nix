@@ -49,7 +49,7 @@
             imports = [
               stylix.homeModules.stylix
               mango.hmModules.mango
-              ./modules/home/default.nix
+              ./modules/home
             ];
           };
         }
