@@ -236,7 +236,6 @@
     ];
 
     extraConfigLua = ''
-      -- <leader>t : open a vertical terminal
       vim.keymap.set("n", "<leader>t", function()
         vim.cmd("vnew")
         vim.cmd("term")

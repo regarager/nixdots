@@ -185,11 +185,8 @@
 
       exec_once = [
         "swaybg -i ~/.config/wallpaper.jpg -m fill"
-        "waybar"
         "mako"
-        "mpd"
-        "vesktop"
-        "firefox"
+        "waybar"
       ];
 
       overview_gap_inner = 5;

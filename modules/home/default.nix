@@ -8,9 +8,11 @@
     ./fuzzel.nix
     ./ghostty.nix
     ./git.nix
+    ./gtk.nix
     ./gpg.nix
     ./mako.nix
     ./mango.nix
+    ./music.nix
     ./nixvim.nix
     ./ripgrep.nix
     ./shiko.nix
