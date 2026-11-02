@@ -127,7 +127,15 @@
         enable = true;
         servers = {
           clangd.enable = true;
-          harper_ls.enable = true;
+          harper_ls = {
+            enable = true;
+            filetypes = [
+              "markdown"
+              "text"
+              "typst"
+              "gitcommit"
+            ];
+          };
           lua_ls.enable = true;
           nixd.enable = true;
           pyright.enable = true;

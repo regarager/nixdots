@@ -4,8 +4,11 @@
   imports = [
     ./hardware-configuration.nix
     ./modules/envvars.nix
+    ./modules/docker.nix
     ./modules/fonts.nix
     ./modules/keyd.nix
+    ./modules/networking.nix
+    ./modules/polkit.nix
     ./modules/packages
   ];
 
@@ -14,20 +17,6 @@
   boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.grub.enable = false;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  networking = {
-    hostName = "nix";
-    networkmanager = {
-      enable = true;
-      plugins = [pkgs.networkmanager-openvpn];
-    };
-    hosts = {
-      "127.0.0.1" = ["localhost"];
-      "127.0.1.1" = ["nix"];
-    };
-  };
-   
-  environment.etc.hosts.mode = "0700"; # makes /etc/hosts writable
 
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -41,6 +30,13 @@
     LC_PAPER = "en_US.UTF-8";
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
+  };
+
+  services.logind.settings.Login = {
+    HandleLidSwitch = "suspend";
+    HandleLidSwitchExternalPower = "suspend";
+    HandleLidSwitchDocked = "ignore";
+    LidSwitchIgnoreInhibited = "no";
   };
 
   services.displayManager.ly.enable = true;
@@ -86,20 +82,6 @@
     cores = 0;
     max-jobs = "auto";
     auto-optimise-store = true;
-  };
-
-  systemd.user.services.polkit-gnome-authentication-agent-1 = {
-    description = "polkit-gnome-authentication-agent-1";
-    wantedBy = ["graphical-session.target"];
-    wants = ["graphical-session.target"];
-    after = ["graphical-session.target"];
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-      Restart = "on-failure";
-      RestartSec = 1;
-      TimeoutStopSec = 10;
-    };
   };
 
   # https://nixos.org/manual/nixos/stable/#sec-upgrading

@@ -6,7 +6,8 @@
     nodejs
     openjdk
     python3
-    rustup
+    cargo
+    rustc
     tree-sitter
     typst
     uv

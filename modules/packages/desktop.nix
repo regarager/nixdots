@@ -6,7 +6,6 @@
     mesa
     nwg-displays
     nwg-look
-    grimblast
     msnap
     brightnessctl
     wl-clipboard

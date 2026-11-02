@@ -8,7 +8,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     shiko-prompt.url = "github:regarager/shiko-prompt";
     shiko-prompt.inputs.nixpkgs.follows = "nixpkgs";
-    waterfox.url = "github:Hythera/nix-waterfox";
     stylix.url = "github:nix-community/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     mango.url = "github:mangowm/mango";

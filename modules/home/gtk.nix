@@ -1,10 +1,15 @@
-{pkgs, lib, ...}: {
-  # Stylix's GTK target assigns the `adw-gtk3` theme, so force the
-  # Gruvbox-Dark theme here. Stylix still appends its Gruvbox palette to
-  # gtk.css (and flatpaks), so application colors stay consistent.
+{
+  pkgs,
+  lib,
+  ...
+}: {
   gtk.theme = lib.mkForce {
-    name = "Gruvbox-Dark";
-    package = pkgs.gruvbox-gtk-theme;
+    name = "Gruvbox-Dark-Medium";
+    package = pkgs.gruvbox-gtk-theme.override {
+      colorVariants = ["dark"];
+      themeVariants = ["default"];
+      tweakVariants = ["medium"];
+    };
   };
 
   gtk.iconTheme = {

@@ -19,7 +19,6 @@
     ./stylix.nix
     ./swayidle.nix
     ./swaylock.nix
-    ./waterfox.nix
     ./waybar.nix
     ./xdg.nix
     ./zoxide.nix

@@ -38,7 +38,7 @@
 
       tag_rule = ["id:*,layout_name:tile"];
       new_is_master = 0;
-      default_master_factor = 0.55;
+      default_master_factor = 0.54;
       default_master_count = 1;
       tag_num = 9;
 
@@ -85,8 +85,7 @@
       window_rule = [
         "ignore_maximize:1,app_id:.*"
         "is_floating:1,width:800,height:600,app_id:xdg-desktop-portal-gtk"
-        "global_key_binding:ctrl+shift-m,app_id:vesktop"
-        "tags:1,app_id:vesktop"
+        "is_floating:1,width:800,height:600,app_id:xdg-desktop-portal-wlr"
       ];
 
       layer_rule = [
@@ -187,6 +186,10 @@
         "swaybg -i ~/.config/wallpaper.jpg -m fill"
         "mako"
         "waybar"
+        # export the wayland socket to the systemd user manager, then (re)start
+        # swayidle so its ConditionEnvironment=WAYLAND_DISPLAY is satisfied
+        "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "systemctl --user restart swayidle.service"
       ];
 
       overview_gap_inner = 5;
@@ -204,7 +207,10 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [xdg-desktop-portal-gtk xdg-desktop-portal-wlr];
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+    ];
     config.common.default = "*";
   };
 }
