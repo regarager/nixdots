@@ -8,7 +8,6 @@
     lazygit
     less
     net-tools
-    pay-respects
     pi-coding-agent
     pokeget-rs
     tmux
